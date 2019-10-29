@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Raumliste</title>
+</head>
+
+<body>
+    <header>
+        <img src="assets/img/logo.png" alt="logo" height="50" width="50" />
+		<h1>Raumbuchungs Web-App</h1>
+		<nav>
+            <a href="./index.html">Raumliste</a>
+			<a href="./raum.html">Raumdetails</a>
+            <a href="./buchung.html">Buchungsdeteils</a>
+            <a href="./seminar.html">Seminar anlegen</a>
+		</nav>
+	</header>
+	<main>
+        <form method="GET">
+            <label for="raumnummer">Raumnummer</label>
+            <select name="raumnummer" id="raumnummer">
+                <option value="A.E.01">A.E.01</option>
+                <option value="A.E.02">A.E.02</option>
+                <option value="A.E.03">A.E.03</option>
+            </select> <br>
+            <label for="bezeichnung">Bezeichnung</label>
+            <input type="text" placeholder="Vorlesung" name="bezeichnung" id="bezeichnung"><br>
+            <label for="datum">Datum</label>
+            <input type="date" id="datum" name="datum"><br>
+            <label for="startzeit">Zeitraum</label>
+            <label for="startzeit">Startzeit</label>
+            <input type="time" name="startzeit" id="startzeit">
+            <label for="endzeit">Endzeit</label>
+            <input type="time" name="endzeit" id="endzeit"><br>
+            <label for="person">buchende Person</label>
+            <select name="person" id="person">
+                <option value="Max Mustermann">Max Mustermann</option>
+                <option value="Maria Musterfrau">Maria Musterfrau</option>
+            </select><br>
+            <label for="teilnehmer">erwartete Anzahl an Teilnehmern</label>
+            <input type="number" placeholder="300" id="teilnehmer" name="teilnehmer"><br>
+            <label for="beschreibung">Beschreibung</label>
+            <textarea placeholder="Vorlesung nummer 4 Thema Formulare" id="beschreibung"></textarea><br>
+            <input type="submit" value="Buchen">
+        </form>
+	</main>
+
+	<hr />
+	<footer>
+		© 2019 Maksim Zimmermann & Martin Zacharias 🕴
+	</footer>
+</body>
+
+</html>

@@ -2,78 +2,96 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Raumdetails</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Raumdetails</title>
 </head>
 
 <body>
-    <header>
-        <h1>Raumbuchungs Web-App</h1>
-        <nav>
-            <a href="./index.html">Raumliste</a>
-            <a href="./raum.html">Raumdetails</a>
-            <a href="./buchung.html">Buchungsdetails</a>
-        </nav>
-    </header>
-    <aside>
-        <h2>Meldungen</h2>
-        <ul>
-            <li><time datetime="2019-10-06">06.10.2019:</time> Stühle kaputt</li>
-            <li><time datetime="2019-10-10">10.10.2019:</time> Beamer kaputt</li>
-            <li><time datetime="2019-10-16">16.10.2019:</time> Fenster kaputt</li>
-        </ul>
-    </aside>
-    <main>
-        <section>
-            <h2>Infos zum Raum</h2>
-            <dl>
-                <dt>Nummer</dt>
-                <dd>A.E.01</dd>
-                <dt>Bezeichnung</dt>
-                <dd>Hörsaal</dd>
-                <dt>Gebäude</dt>
-                <dd>EF 42</dd>
-                <dt>Sitzplätze</dt>
-                <dd>100</dd>
-                <dt>Ausstattung</dt>
-                <dd>1 Whiteboard</dd>
-            </dl>
-        </section>
-        <section>
-            <h2>Buchungen</h2>
-            <ol>
-                <li>
-                    <a href="./buchung.html">
-                        <time datetime="2019-10-10 14:00">10.10.2019 14:00</time> -
-                        <time datetime="2019-10-10 15:30">15:30 Uhr</time> Vorlesung
-                    </a>
-                </li>
-                <li>
-                    <a href="./buchung.html">
-                        <time datetime="2019-10-11 14:00">11.10.2019 14:00</time> -
-                        <time datetime="2019-10-11 15:30">15:30 Uhr</time> Übung
-                    </a>
-                </li>
-                <li>
-                    <a href="./buchung.html">
-                        <time datetime="2019-10-12 14:00">12.10.2019 14:00</time> -
-                        <time datetime="2019-10-12 15:30">15:30 Uhr</time> Praktikum</a>
-                </li>
-                <li>
-                    <a href="./buchung.html">
-                        <time datetime="2019-10-13 14:00">13.10.2019 14:00</time> -
-                        <time datetime="2019-10-13 15:30">15:30 Uhr</time> Lernen</a>
-                </li>
-            </ol>
-        </section>
-    </main>
+	<header>
+		<img src="assets/img/logo.png" alt="logo" height="50" width="50" />
+		<h1>Raumbuchungs Web-App</h1>
+		<nav>
+			<a href="./index.html">Raumliste</a>
+			<a href="./raum.html">Raumdetails</a>
+			<a href="./buchung.html">Buchungsdetails</a>
+            <a href="./seminar.html">Seminar anlegen</a>
+		</nav>
+	</header>
+	<aside>
+		<h2>Meldungen</h2>
+		<ul>
+			<li><time datetime="2019-10-06">06.10.2019:</time> Stühle kaputt</li>
+			<li><time datetime="2019-10-10">10.10.2019:</time> Beamer kaputt</li>
+			<li><time datetime="2019-10-16">16.10.2019:</time> Fenster kaputt</li>
+		</ul>
+	</aside>
+	<main>
+		<section>
+			<h2>Infos zum Raum</h2>
+			<dl>
+				<dt>Nummer</dt>
+				<dd>A.E.01</dd>
+				<dt>Bezeichnung</dt>
+				<dd>Hörsaal</dd>
+				<dt>Gebäude</dt>
+				<dd>EF 42</dd>
+				<dt>Sitzplätze</dt>
+				<dd>100</dd>
+				<dt>Ausstattung</dt>
+				<dd>1 Whiteboard</dd>
+			</dl>
+			<figure>
+				<img src="assets/img/raum.jpg" alt="Raumbild" height="357" width="500" />
+				<figcaption>So sieht der Raum aus</figcaption>
+			</figure>
+		</section>
+		<section>
+			<h2>Buchungen</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Datum</th>
+						<th>Startzeit</th>
+						<th>Endzeit</th>
+						<th>Bezeichnung</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><time datetime="2019-10-10">10.10.2019</time></td>
+						<td><time datetime="14:00">14:00</time></td>
+						<td><time datetime="15:30">15:30 Uhr</time></td>
+						<td><a href="./buchung.html">Vorlesung</a></td>
+					</tr>
+					<tr>
+						<td><time datetime="2019-10-11">11.10.2019</time></td>
+						<td><time datetime="14:00">14:00</time></td>
+						<td><time datetime="15:30">15:30 Uhr</time></td>
+						<td><a href="./buchung.html">Übung</a></td>
+					</tr>
+					<tr>
+						<td><time datetime="2019-10-12">12.10.2019</time></td>
+						<td><time datetime="14:00">14:00</time></td>
+						<td><time datetime="15:30">15:30 Uhr</time></td>
+						<td><a href="./buchung.html">Praktikum</a></td>
+					</tr>
+					<tr>
+						<td><time datetime="2019-10-13">13.10.2019</time></td>
+						<td><time datetime="14:00">14:00</time></td>
+						<td><time datetime="15:30">15:30 Uhr</time></td>
+						<td><a href="./buchung.html">Lernen</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</main>
 
-    <hr />
-    <footer>
-        © 2019 Maksim Zimmermann & Martin Zacharias 🕴
-    </footer>
+	<hr />
+	<footer>
+		© 2019 Maksim Zimmermann & Martin Zacharias 🕴
+	</footer>
 </body>
 
 </html>
