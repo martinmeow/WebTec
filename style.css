@@ -1,0 +1,45 @@
+*{
+	font-family: Arial;
+}
+
+h1, h2 {
+	color: coral;
+}
+
+input[type="text"]:valid, input[type="date"]:valid, input[type="time"]:valid{
+	border-color: lime;
+	outline-color: lime;
+}
+
+input[type="text"]:invalid, input[type="date"]:invalid, input[type="time"]:invalid{
+	border-color: red;
+	outline-color: rebeccapurple;
+}
+
+input[type="text"]:required:invalid{
+	border-color: crimson
+}
+
+span.required::after {
+	content: " (erforderliche Eingabe)";
+}
+
+aside{
+	background-color: khaki;
+}
+
+nav a:hover{
+	color: burlywood;
+}
+
+#buchungsTable tbody tr:nth-of-type(even){
+	background-color: lightgray;
+}
+
+#buchungsTable th{
+	background-color: lightslategray;
+}
+
+a[href^="mailto:"]::before{
+	content: "📧";
+}

@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Raumliste</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -23,23 +24,28 @@
 		<form method="POST" action="https://labs.inf.fh-dortmund.de/roomReservationService/testCreateReservation.php">
 			<fieldset>
 				<label for="raumnummer">Raumnummer</label>
-				<select required name="roomno" id="raumnummer" size="3" autofocus>
+				<select name="roomno" id="raumnummer" size="1" autofocus>
 					<option value="A.E.01">A.E.01</option>
 					<option value="A.E.02">A.E.02</option>
 					<option value="A.E.03">A.E.03</option>
 				</select><br>
-				<label for="bezeichnung">Bezeichnung</label>
-				<input required maxlength="20" type="text" placeholder="Vorlesung" name="restitle" id="bezeichnung"><br>
+				<span class="required">
+					<label for="bezeichnung">Bezeichnung</label>
+					<input required maxlength="20" type="text" placeholder="Vorlesung" name="restitle" id="bezeichnung">
+				</span><br>
 			</fieldset>
 			<fieldset>
 				<legend>Datum</legend>
-				<label for="datum">Datum</label>
-				<input required type="date" id="datum" name="resdate"><br>
-				<label for="startzeit">Zeitraum</label>
-				<label for="startzeit">Startzeit</label>
-				<input required min="08:00" max="21:00" type="time" name="resstart" id="startzeit">
-				<label for="endzeit">Endzeit</label>
-				<input required min="00:00" max="22:00" type="time" name="resend" id="endzeit"><br>
+				<span class="required">
+					<label for="datum">Datum</label>
+					<input required type="date" id="datum" name="resdate">
+				</span><br>
+				<span class="required">
+					<label for="startzeit">Zeitraum von</label>
+					<input required min="08:00" max="21:00" type="time" name="resstart" id="startzeit">
+					<label for="endzeit">bis</label>
+					<input required min="08:00" max="22:00" type="time" name="resend" id="endzeit">
+				</span><br>
 			</fieldset>
 			<fieldset>
 				<label for="person">buchende Person</label>
@@ -48,7 +54,7 @@
 					<option value="Maria Musterfrau">Maria Musterfrau</option>
 				</select><br>
 				<label for="teilnehmer">erwartete Anzahl an Teilnehmern</label>
-				<input type="number" placeholder="300" id="teilnehmer" name="resparticipants"><br>
+				<input type="number" placeholder="300" min="1" id="teilnehmer" name="resparticipants"><br>
 				<label for="beschreibung">Beschreibung</label>
 				<textarea maxlength="500" name="resdescription" placeholder="Vorlesung nummer 4 Thema Formulare"
 					id="beschreibung"></textarea><br>
