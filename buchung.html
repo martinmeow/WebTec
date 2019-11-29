@@ -7,9 +7,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Buchungsdetails</title>
 	<link rel="stylesheet" href="stylesheets/style.css">
+	<link rel="stylesheet" href="stylesheets/flexbox.css">
 </head>
 
-<body>
+<body class="flex">
 	<header>
 		<img src="assets/img/logo.png" alt="logo" height="50" width="50" />
 		<h1>Raumbuchungs Web-App</h1>
@@ -23,42 +24,43 @@
 		</ul>
 	</nav>
 
-	<aside>
-		<h2>Meldungen</h2>
-		<ul>
-			<li><time datetime="2019-10-06">06.10.2019:</time> Stühle kaputt</li>
-			<li><time datetime="2019-10-10">10.10.2019:</time> Beamer kaputt</li>
-			<li><time datetime="2019-10-16">16.10.2019:</time> Fenster kaputt</li>
-		</ul>
-	</aside>
+	<div class="flex flexInner">
+		<aside>
+			<h2>Meldungen</h2>
+			<ul>
+				<li><time datetime="2019-10-06">06.10.2019:</time> Stühle kaputt</li>
+				<li><time datetime="2019-10-10">10.10.2019:</time> Beamer kaputt</li>
+				<li><time datetime="2019-10-16">16.10.2019:</time> Fenster kaputt</li>
+			</ul>
+		</aside>
 
-	<main>
-		<section>
-			<h2>Infos zur Buchung</h2>
-			<dl>
-				<dt>Bezeichnung</dt>
-				<dd>Vorlesung</dd>
-				<dt>Datum</dt>
-				<dd><time datetime="2019-10-10">10.10.2019</time></dd>
-				<dt>Zeitraum</dt>
-				<dd><time datetime="14:00">14:00</time> - <time datetime="15:00">15:00 Uhr</time></dd>
-				<dt>Gebucht von</dt>
-				<dd><a href="mailto:Prof@fh-dortmund.de">Herr Prof. Prof</a></dd>
-				<dt>Anzahl Teilnehmer</dt>
-				<dd>70</dd>
-			</dl>
-		</section>
+		<main>
+			<section>
+				<h2>Infos zur Buchung</h2>
+				<dl>
+					<dt>Bezeichnung</dt>
+					<dd>Vorlesung</dd>
+					<dt>Datum</dt>
+					<dd><time datetime="2019-10-10">10.10.2019</time></dd>
+					<dt>Zeitraum</dt>
+					<dd><time datetime="14:00">14:00</time> - <time datetime="15:00">15:00 Uhr</time></dd>
+					<dt>Gebucht von</dt>
+					<dd><a href="mailto:Prof@fh-dortmund.de">Herr Prof. Prof</a></dd>
+					<dt>Anzahl Teilnehmer</dt>
+					<dd>70</dd>
+				</dl>
+			</section>
 
-		<section>
-			<h2>Beschreibung</h2>
-			<p>Eine tolle und interessante Vorlesung von Herr Prof. Prof.
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-				Exercitationem, ipsum sunt minus nostrum quaerat praesentium
-				maxime saepe et illum. Aut nam doloribus commodi eveniet maxime
-				corporis numquam sit! Nemo, nostrum!</p>
-		</section>
-	</main>
-
+			<section>
+				<h2>Beschreibung</h2>
+				<p>Eine tolle und interessante Vorlesung von Herr Prof. Prof.
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					Exercitationem, ipsum sunt minus nostrum quaerat praesentium
+					maxime saepe et illum. Aut nam doloribus commodi eveniet maxime
+					corporis numquam sit! Nemo, nostrum!</p>
+			</section>
+		</main>
+	</div>
 	<hr />
 	<footer>
 		© 2019 Maksim Zimmermann & Martin Zacharias 🕴

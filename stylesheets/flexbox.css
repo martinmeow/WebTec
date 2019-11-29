@@ -2,11 +2,11 @@
     display: flex;
 }
 
-.flexContainer{
+body.flex{
     flex-direction: column;
 }
 
-.flexInner{
+div.flexInner{
     flex-direction: row-reverse;
     align-self: baseline;
 }
