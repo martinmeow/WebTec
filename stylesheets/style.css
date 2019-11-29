@@ -1,34 +1,42 @@
+/* global fonts */
 *{
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-h1, h2 {
+/* headings */
+h1, h2, h3, h4, h5, h6{
 	color: coral;
 }
 
+/* titel heading */
 header h1{
 	text-shadow: 4px 4px 2px cyan;
 	letter-spacing: 5px;
 }
 
+/* verschiedene inputs valid */
 input[type="text"]:valid, input[type="date"]:valid, input[type="time"]:valid{
 	border-color: lime;
 	outline-color: lime;
 }
 
+/* verschiedene inputs invalid */
 input[type="text"]:invalid, input[type="date"]:invalid, input[type="time"]:invalid{
 	border-color: red;
 	outline-color: rebeccapurple;
 }
 
+/* required inputs invalid */
 input[type="text"]:required:invalid{
 	border-color: crimson
 }
 
+/* span um required inputs */
 span.required::after {
 	content: " (erforderliche Eingabe)";
 }
 
+/* aktuelle Meldungen */
 aside{
 	background-color: khaki;
 	padding: 3px;
@@ -37,27 +45,30 @@ aside{
 	border-width: 2px;
 }
 
+/* links im nav bereich */
 nav a:hover{
 	color: burlywood;
 }
 
+/* jede zweite Zeile im buchungsTable */
 #buchungsTable tbody tr:nth-of-type(even){
 	background-color: lightgray;
 }
 
+/* Kopfzeile */
 #buchungsTable th{
 	background-color: lightslategray;
 }
-
+/* mailto links */
 a[href^="mailto:"]::before{
 	content: "📧";
 }
-
+/* fieldsets */
 fieldset{
 	padding: 5px;
 	margin: 5px;
 }
-
+/* legends */
 legend{
 	font-style: italic;
 	font-size: smaller;
@@ -65,14 +76,40 @@ legend{
 	background-color: antiquewhite;
 	box-shadow: 2px 2px 2px black;
 }
-
+/* legends und fieldsets */
 legend, fieldset{
 	border-radius: 5px;
 }
-
+/* section border links und unten */
 section{
     border: 1px black;
     border-left-style: solid;
     border-bottom-style: solid;
     padding: 0px 0px 5px 5px;
+}
+
+/* nav bar links */
+nav ul li{
+	list-style: none;
+	margin-left: 10px;
+	display: inline-block;
+}
+/* logo + title nebeneinander */
+header{
+	display: inline-flex;
+}
+
+/* footer bleibt immer unten */
+footer{
+	position: fixed;
+	bottom: 0px;
+	background-color: wheat;
+}
+
+/* TODO: */
+figure::after, figure::before{
+	content: "TODO!";
+	font-size: 100px;
+	color: crimson;
+	display: block;
 }
