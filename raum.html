@@ -6,20 +6,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Raumdetails</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
 </head>
 
 <body>
 	<header>
-		<img src="assets/img/logo.png" alt="logo" height="50" width="50" />
+		<img src="assets/img/logo.png" alt="logo" height="50" width="50" id="logo" />
 		<h1>Raumbuchungs Web-App</h1>
-		<nav>
-			<a href="./index.html">Raumliste</a>
-			<a href="./raum.html">Raumdetails</a>
-			<a href="./buchung.html">Buchungsdetails</a>
-			<a href="./seminar.html">Seminar anlegen</a>
-		</nav>
 	</header>
+	<nav>
+		<ul>
+			<li><a href="./index.html">Raumliste</a></li>
+			<li><a href="./raum.html">Raumdetails</a></li>
+			<li><a href="./buchung.html">Buchungsdetails</a></li>
+			<li><a href="./seminar.html">Seminar anlegen</a></li>
+		</ul>
+	</nav>
 	<aside>
 		<h2>Meldungen</h2>
 		<ul>
@@ -29,6 +31,10 @@
 		</ul>
 	</aside>
 	<main>
+		<figure>
+			<img src="assets/img/raum.jpg" alt="Raumbild" id="raumBild" height="357" width="500" />
+			<figcaption>So sieht der Raum aus</figcaption>
+		</figure>
 		<section>
 			<h2>Infos zum Raum</h2>
 			<dl>
@@ -43,10 +49,6 @@
 				<dt>Ausstattung</dt>
 				<dd>1 Whiteboard</dd>
 			</dl>
-			<figure>
-				<img src="assets/img/raum.jpg" alt="Raumbild" height="357" width="500" />
-				<figcaption>So sieht der Raum aus</figcaption>
-			</figure>
 		</section>
 		<section>
 			<h2>Buchungen</h2>
@@ -88,7 +90,6 @@
 			</table>
 		</section>
 	</main>
-
 	<hr />
 	<footer>
 		© 2019 Maksim Zimmermann & Martin Zacharias 🕴
