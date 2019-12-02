@@ -1,12 +1,10 @@
-.flex{
+body{
     display: flex;
-}
-
-body.flex{
     flex-direction: column;
 }
 
 div.flexInner{
+    display: flex;
     flex-direction: row-reverse;
     align-self: baseline;
 }
