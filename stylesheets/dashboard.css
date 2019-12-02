@@ -1,0 +1,19 @@
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex a{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	background-color: orange;
+	margin: 0.2em;
+	border: 2px solid black;
+	height: 10em;
+    width: 10em;
+    text-decoration: none;
+    color: black;
+}
