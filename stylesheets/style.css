@@ -8,6 +8,16 @@ h1, h2, h3, h4, h5, h6{
 	color: coral;
 }
 
+/* logo + heading inline */
+#logo{
+	float: left;
+}
+
+/* raum bild right */
+#raumBild{
+	float: right;
+}
+
 /* titel heading */
 header h1{
 	text-shadow: 4px 4px 2px cyan;
@@ -94,10 +104,6 @@ nav ul li{
 	margin-left: 10px;
 	display: inline-block;
 }
-/* logo + title nebeneinander */
-header{
-	display: inline-flex;
-}
 
 /* footer bleibt immer unten */
 footer{
@@ -106,10 +112,10 @@ footer{
 	background-color: wheat;
 }
 
-/* TODO: */
-figure::after, figure::before{
-	content: "TODO!";
-	font-size: 100px;
-	color: crimson;
-	display: block;
+nav{
+	clear: both;	
+}
+
+hr{
+clear: both;
 }
