@@ -22,4 +22,4 @@ main.innerGrid{
                          ". bild";
  }
 
-figure{grid-area: bild}
+figure{grid-area: bild;}
