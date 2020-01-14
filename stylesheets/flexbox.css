@@ -1,10 +1,16 @@
-body{
-    display: flex;
-    flex-direction: column;
+body {
+	display: flex;
+	flex-direction: column;
 }
 
-div.flexInner{
-    display: flex;
-    flex-direction: row-reverse;
-    align-self: baseline;
+div.flexInner {
+	display: flex;
+	flex-direction: row;
+	align-self: baseline;
+}
+
+@media only screen and (max-width: 768px) {
+	div.flexInner {
+		flex-direction: column;
+	}
 }

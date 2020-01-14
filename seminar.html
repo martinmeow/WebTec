@@ -1,85 +1,99 @@
 <!DOCTYPE html>
 <html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Seminar anlegen</title>
+		<link rel="stylesheet" href="stylesheets/style.css" />
+		<link rel="stylesheet" href="stylesheets/grid.css" />
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Seminar anlegen</title>
-	<link rel="stylesheet" href="stylesheets/style.css">
-	<link rel="stylesheet" href="stylesheets/grid.css">
-</head>
+	<body>
+		<header>
+			<a href="dashboard.html">
+				<img src=" assets/img/logo.png" alt="logo" height="50" width="50" />
+				<h1>Raumbuchungs Web-App</h1>
+			</a>
+		</header>
 
-<body>
-	<header>
-		<a href="dashboard.html"><img src=" assets/img/logo.png" alt="logo" height="50" width="50" id="logo" /></a>
-		<h1>Raumbuchungs Web-App</h1>
-	</header>
-	<nav>
-		<ul>
-			<li><a href="./liste.html">Raumliste</a></li>
-			<li><a href="./raum.html">Raumdetails</a></li>
-			<li><a href="./buchung.html">Buchungsdetails</a></li>
-			<li><a href="./seminar.html">Seminar anlegen</a></li>
-		</ul>
-	</nav>
-	<aside>
-		<h2>Meldungen</h2>
-		<ul>
-			<li><time datetime="2019-10-06">06.10.2019:</time> Stühle kaputt</li>
-			<li><time datetime="2019-10-10">10.10.2019:</time> Beamer kaputt</li>
-			<li><time datetime="2019-10-16">16.10.2019:</time> Fenster kaputt</li>
-		</ul>
-	</aside>
-	<main>
-		<form method="POST" action="https://labs.inf.fh-dortmund.de/roomReservationService/testCreateReservation.php">
-			<fieldset>
-				<legend>Raum</legend>
-				<label for="raumnummer">Raumnummer</label>
-				<select name="roomno" id="raumnummer" size="1" autofocus>
-					<option value="A.E.01">A.E.01</option>
-					<option value="A.E.02">A.E.02</option>
-					<option value="A.E.03">A.E.03</option>
-				</select><br>
-				<span class="required">
-					<label for="bezeichnung">Bezeichnung</label>
-					<input required maxlength="20" type="text" placeholder="Vorlesung" name="restitle" id="bezeichnung">
-				</span><br>
-			</fieldset>
-			<fieldset>
-				<legend>Datum</legend>
-				<span class="required">
-					<label for="datum">Datum</label>
-					<input required type="date" id="datum" name="resdate">
-				</span><br>
-				<span class="required">
-					<label for="startzeit">Zeitraum von</label>
-					<input required min="08:00" max="21:00" type="time" name="resstart" id="startzeit">
-					<label for="endzeit">bis</label>
-					<input required min="08:00" max="22:00" type="time" name="resend" id="endzeit">
-				</span><br>
-			</fieldset>
-			<fieldset>
-				<legend>Person</legend>
-				<label for="person">buchende Person</label>
-				<select name="resperson" id="person">
-					<option value="Max Mustermann">Max Mustermann</option>
-					<option value="Maria Musterfrau">Maria Musterfrau</option>
-				</select><br>
-				<label for="teilnehmer">erwartete Anzahl an Teilnehmern</label>
-				<input type="number" placeholder="300" min="1" id="teilnehmer" name="resparticipants"><br>
-				<label for="beschreibung">Beschreibung</label>
-				<textarea maxlength="500" name="resdescription" placeholder="Vorlesung nummer 4 Thema Formulare"
-					id="beschreibung"></textarea><br>
-			</fieldset>
-			<fieldset>
-				<input type="submit" value="Buchen">
-			</fieldset>
-		</form>
-	</main>
-	<footer>
-		© 2019 Maksim Zimmermann & Martin Zacharias 🕴
-	</footer>
-</body>
+		<nav class="clearFloat">
+			<ul>
+				<li><a href="./liste.html">Raumliste</a></li>
+				<li><a href="./raum.html">Raumdetails</a></li>
+				<li><a href="./buchung.html">Buchungsdetails</a></li>
+				<li><a href="./seminar.html">Seminar anlegen</a></li>
+			</ul>
+		</nav>
 
+		<aside>
+			<h2>Meldungen</h2>
+			<ul>
+				<li><time datetime="2019-10-06">06.10.2019:</time> Stühle kaputt</li>
+				<li><time datetime="2019-10-10">10.10.2019:</time> Beamer kaputt</li>
+				<li><time datetime="2019-10-16">16.10.2019:</time> Fenster kaputt</li>
+			</ul>
+		</aside>
+
+		<main>
+			<form method="POST" action="https://labs.inf.fh-dortmund.de/roomReservationService/testCreateReservation.php">
+				<fieldset>
+					<legend>Raum</legend>
+					<label for="raumnummer">Raumnummer</label>
+					<select name="roomno" id="raumnummer" size="1" autofocus>
+						<option value="A.E.01">A.E.01</option>
+						<option value="A.E.02">A.E.02</option>
+						<option value="A.E.03">A.E.03</option>
+					</select>
+					<br />
+					<span class="required">
+						<label for="bezeichnung">Bezeichnung</label>
+						<input required maxlength="20" type="text" placeholder="Vorlesung" name="restitle" id="bezeichnung" />
+					</span>
+					<br />
+				</fieldset>
+				<fieldset>
+					<legend>Datum</legend>
+					<span class="required">
+						<label for="datum">Datum</label>
+						<input required type="date" id="datum" name="resdate" />
+					</span>
+					<br />
+					<span class="required">
+						<label for="startzeit">Zeitraum von</label>
+						<input required min="08:00" max="21:00" type="time" name="resstart" id="startzeit" />
+						<label for="endzeit">bis</label>
+						<input required min="08:00" max="22:00" type="time" name="resend" id="endzeit" />
+					</span>
+					<br />
+				</fieldset>
+				<fieldset>
+					<legend>Person</legend>
+					<label for="person">buchende Person</label>
+					<select name="resperson" id="person">
+						<option value="Max Mustermann">Max Mustermann</option>
+						<option value="Maria Musterfrau">Maria Musterfrau</option>
+					</select>
+					<br />
+					<label for="teilnehmer">erwartete Anzahl an Teilnehmern</label>
+					<input type="number" placeholder="300" min="1" id="teilnehmer" name="resparticipants" /><br />
+					<label for="beschreibung">Beschreibung</label>
+					<textarea
+						maxlength="500"
+						name="resdescription"
+						placeholder="Vorlesung nummer 4 Thema Formulare"
+						id="beschreibung"
+					></textarea>
+					<br />
+				</fieldset>
+				<fieldset>
+					<input type="submit" value="Buchen" />
+				</fieldset>
+			</form>
+		</main>
+
+		<footer>
+			© 2019 Maksim Zimmermann & Martin Zacharias 🕴
+		</footer>
+	</body>
 </html>

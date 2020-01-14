@@ -1,69 +1,74 @@
 <!DOCTYPE html>
 <html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Buchungsdetails</title>
+		<link rel="stylesheet" href="stylesheets/style.css" />
+		<link rel="stylesheet" href="stylesheets/flexbox.css" />
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Buchungsdetails</title>
-	<link rel="stylesheet" href="stylesheets/style.css">
-	<link rel="stylesheet" href="stylesheets/flexbox.css">
-</head>
+	<body>
+		<header>
+			<a href="dashboard.html">
+				<img src="assets/img/logo.png" alt="logo" height="50" width="50" />
+				<h1>Raumbuchungs Web-App</h1>
+			</a>
+		</header>
 
-<body>
-	<header>
-		<a href="dashboard.html"><img src="assets/img/logo.png" alt="logo" height="50" width="50" id="logo" /></a>
-		<h1>Raumbuchungs Web-App</h1>
-	</header>
-	<nav>
-		<ul>
-			<li><a href="./liste.html">Raumliste</a></li>
-			<li><a href="./raum.html">Raumdetails</a></li>
-			<li><a href="./buchung.html">Buchungsdetails</a></li>
-			<li><a href="./seminar.html">Seminar anlegen</a></li>
-		</ul>
-	</nav>
-
-	<div class="flexInner">
-		<aside>
-			<h2>Meldungen</h2>
+		<nav class="clearFloat">
 			<ul>
-				<li><time datetime="2019-10-06">06.10.2019:</time> Stühle kaputt</li>
-				<li><time datetime="2019-10-10">10.10.2019:</time> Beamer kaputt</li>
-				<li><time datetime="2019-10-16">16.10.2019:</time> Fenster kaputt</li>
+				<li><a href="./liste.html">Raumliste</a></li>
+				<li><a href="./raum.html">Raumdetails</a></li>
+				<li><a href="./buchung.html">Buchungsdetails</a></li>
+				<li><a href="./seminar.html">Seminar anlegen</a></li>
 			</ul>
-		</aside>
+		</nav>
 
-		<main>
-			<section>
-				<h2>Infos zur Buchung</h2>
-				<dl>
-					<dt>Bezeichnung</dt>
-					<dd>Vorlesung</dd>
-					<dt>Datum</dt>
-					<dd><time datetime="2019-10-10">10.10.2019</time></dd>
-					<dt>Zeitraum</dt>
-					<dd><time datetime="14:00">14:00</time> - <time datetime="15:00">15:00 Uhr</time></dd>
-					<dt>Gebucht von</dt>
-					<dd><a href="mailto:Prof@fh-dortmund.de">Herr Prof. Prof</a></dd>
-					<dt>Anzahl Teilnehmer</dt>
-					<dd>70</dd>
-				</dl>
-			</section>
+		<div class="flexInner">
+			<main>
+				<section>
+					<h2>Infos zur Buchung</h2>
+					<dl>
+						<dt>Bezeichnung</dt>
+						<dd>Vorlesung</dd>
+						<dt>Datum</dt>
+						<dd><time datetime="2019-10-10">10.10.2019</time></dd>
+						<dt>Zeitraum</dt>
+						<dd>
+							<time datetime="14:00">14:00</time> -
+							<time datetime="15:00">15:00 Uhr</time>
+						</dd>
+						<dt>Gebucht von</dt>
+						<dd><a href="mailto:Prof@fh-dortmund.de">Herr Prof. Prof</a></dd>
+						<dt>Anzahl Teilnehmer</dt>
+						<dd>70</dd>
+					</dl>
+				</section>
 
-			<section>
-				<h2>Beschreibung</h2>
-				<p>Eine tolle und interessante Vorlesung von Herr Prof. Prof.
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					Exercitationem, ipsum sunt minus nostrum quaerat praesentium
-					maxime saepe et illum. Aut nam doloribus commodi eveniet maxime
-					corporis numquam sit! Nemo, nostrum!</p>
-			</section>
-		</main>
-	</div>
-	<footer>
-		© 2019 Maksim Zimmermann & Martin Zacharias 🕴
-	</footer>
-</body>
+				<section>
+					<h2>Beschreibung</h2>
+					<p>
+						Eine tolle und interessante Vorlesung von Herr Prof. Prof. Lorem ipsum, dolor sit amet consectetur
+						adipisicing elit. Exercitationem, ipsum sunt minus nostrum quaerat praesentium maxime saepe et illum. Aut
+						nam doloribus commodi eveniet maxime corporis numquam sit! Nemo, nostrum!
+					</p>
+				</section>
+			</main>
 
+			<aside>
+				<h2>Meldungen</h2>
+				<ul>
+					<li><time datetime="2019-10-06">06.10.2019:</time> Stühle kaputt</li>
+					<li><time datetime="2019-10-10">10.10.2019:</time> Beamer kaputt</li>
+					<li><time datetime="2019-10-16">16.10.2019:</time> Fenster kaputt</li>
+				</ul>
+			</aside>
+		</div>
+
+		<footer>
+			© 2019 Maksim Zimmermann & Martin Zacharias 🕴
+		</footer>
+	</body>
 </html>

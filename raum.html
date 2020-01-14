@@ -1,99 +1,104 @@
 <!DOCTYPE html>
 <html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Raumdetails</title>
+		<link rel="stylesheet" href="stylesheets/style.css" />
+		<link rel="stylesheet" href="stylesheets/grid.css" />
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Raumdetails</title>
-	<link rel="stylesheet" href="stylesheets/style.css">
-	<link rel="stylesheet" href="stylesheets/grid.css">
-</head>
+	<body>
+		<header>
+			<a href="dashboard.html">
+				<img src=" assets/img/logo.png" alt="logo" height="50" width="50" />
+				<h1>Raumbuchungs Web-App</h1>
+			</a>
+		</header>
 
-<body>
-	<header>
-		<a href="dashboard.html"><img src=" assets/img/logo.png" alt="logo" height="50" width="50" id="logo" /></a>
-		<h1>Raumbuchungs Web-App</h1>
-	</header>
-	<nav>
-		<ul>
-			<li><a href="./liste.html">Raumliste</a></li>
-			<li><a href="./raum.html">Raumdetails</a></li>
-			<li><a href="./buchung.html">Buchungsdetails</a></li>
-			<li><a href="./seminar.html">Seminar anlegen</a></li>
-		</ul>
-	</nav>
-	<aside>
-		<h2>Meldungen</h2>
-		<ul>
-			<li><time datetime="2019-10-06">06.10.2019:</time> Stühle kaputt</li>
-			<li><time datetime="2019-10-10">10.10.2019:</time> Beamer kaputt</li>
-			<li><time datetime="2019-10-16">16.10.2019:</time> Fenster kaputt</li>
-		</ul>
-	</aside>
-	<main class="innerGrid">
-		<figure>
-			<img src="assets/img/raum.jpg" alt="Raumbild" id="raumBild" height="357" width="500" />
-			<figcaption>So sieht der Raum aus</figcaption>
-		</figure>
-		<section>
-			<h2>Infos zum Raum</h2>
-			<dl>
-				<dt>Nummer</dt>
-				<dd>A.E.01</dd>
-				<dt>Bezeichnung</dt>
-				<dd>Hörsaal</dd>
-				<dt>Gebäude</dt>
-				<dd>EF 42</dd>
-				<dt>Sitzplätze</dt>
-				<dd>100</dd>
-				<dt>Ausstattung</dt>
-				<dd>1 Whiteboard</dd>
-			</dl>
-		</section>
-		<section>
-			<h2>Buchungen</h2>
-			<table id="buchungsTable">
-				<thead>
-					<tr>
-						<th>Datum</th>
-						<th>Startzeit</th>
-						<th>Endzeit</th>
-						<th>Bezeichnung</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><time datetime="2019-10-10">10.10.2019</time></td>
-						<td><time datetime="14:00">14:00</time></td>
-						<td><time datetime="15:30">15:30 Uhr</time></td>
-						<td><a href="./buchung.html">Vorlesung</a></td>
-					</tr>
-					<tr>
-						<td><time datetime="2019-10-11">11.10.2019</time></td>
-						<td><time datetime="14:00">14:00</time></td>
-						<td><time datetime="15:30">15:30 Uhr</time></td>
-						<td><a href="./buchung.html">Übung</a></td>
-					</tr>
-					<tr>
-						<td><time datetime="2019-10-12">12.10.2019</time></td>
-						<td><time datetime="14:00">14:00</time></td>
-						<td><time datetime="15:30">15:30 Uhr</time></td>
-						<td><a href="./buchung.html">Praktikum</a></td>
-					</tr>
-					<tr>
-						<td><time datetime="2019-10-13">13.10.2019</time></td>
-						<td><time datetime="14:00">14:00</time></td>
-						<td><time datetime="15:30">15:30 Uhr</time></td>
-						<td><a href="./buchung.html">Lernen</a></td>
-					</tr>
-				</tbody>
-			</table>
-		</section>
-	</main>
-	<footer>
-		© 2019 Maksim Zimmermann & Martin Zacharias 🕴
-	</footer>
-</body>
+		<nav class="clearFloat">
+			<ul>
+				<li><a href="./liste.html">Raumliste</a></li>
+				<li><a href="./raum.html">Raumdetails</a></li>
+				<li><a href="./buchung.html">Buchungsdetails</a></li>
+				<li><a href="./seminar.html">Seminar anlegen</a></li>
+			</ul>
+		</nav>
 
+		<main>
+			<figure>
+				<img src="assets/img/raum.jpg" alt="Raumbild" id="raumBild" height="177" width="250" />
+				<figcaption>So sieht der Raum aus</figcaption>
+			</figure>
+			<section>
+				<h2>Infos zum Raum</h2>
+				<dl>
+					<dt>Nummer</dt>
+					<dd>A.E.01</dd>
+					<dt>Bezeichnung</dt>
+					<dd>Hörsaal</dd>
+					<dt>Gebäude</dt>
+					<dd>EF 42</dd>
+					<dt>Sitzplätze</dt>
+					<dd>100</dd>
+					<dt>Ausstattung</dt>
+					<dd>1 Whiteboard</dd>
+				</dl>
+			</section>
+
+			<section>
+				<h2>Buchungen</h2>
+				<table id="buchungsTable">
+					<thead>
+						<tr>
+							<th>Datum</th>
+							<th>Startzeit</th>
+							<th>Endzeit</th>
+							<th>Bezeichnung</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><time datetime="2019-10-10">10.10.2019</time></td>
+							<td><time datetime="14:00">14:00</time></td>
+							<td><time datetime="15:30">15:30 Uhr</time></td>
+							<td><a href="./buchung.html">Vorlesung</a></td>
+						</tr>
+						<tr>
+							<td><time datetime="2019-10-11">11.10.2019</time></td>
+							<td><time datetime="14:00">14:00</time></td>
+							<td><time datetime="15:30">15:30 Uhr</time></td>
+							<td><a href="./buchung.html">Übung</a></td>
+						</tr>
+						<tr>
+							<td><time datetime="2019-10-12">12.10.2019</time></td>
+							<td><time datetime="14:00">14:00</time></td>
+							<td><time datetime="15:30">15:30 Uhr</time></td>
+							<td><a href="./buchung.html">Praktikum</a></td>
+						</tr>
+						<tr>
+							<td><time datetime="2019-10-13">13.10.2019</time></td>
+							<td><time datetime="14:00">14:00</time></td>
+							<td><time datetime="15:30">15:30 Uhr</time></td>
+							<td><a href="./buchung.html">Lernen</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</main>
+
+		<aside>
+			<h2>Meldungen</h2>
+			<ul>
+				<li><time datetime="2019-10-06">06.10.2019:</time> Stühle kaputt</li>
+				<li><time datetime="2019-10-10">10.10.2019:</time> Beamer kaputt</li>
+				<li><time datetime="2019-10-16">16.10.2019:</time> Fenster kaputt</li>
+			</ul>
+		</aside>
+
+		<footer>
+			© 2019 Maksim Zimmermann & Martin Zacharias 🕴
+		</footer>
+	</body>
 </html>

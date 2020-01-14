@@ -1,67 +1,82 @@
 <!DOCTYPE html>
 <html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Raumliste</title>
+		<link rel="stylesheet" href="stylesheets/style.css" />
+		<link rel="stylesheet" href="stylesheets/flexbox.css" />
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Raumliste</title>
-	<link rel="stylesheet" href="stylesheets/style.css">
-	<link rel="stylesheet" href="stylesheets/flexbox.css">
-</head>
+	<body>
+		<header>
+			<a href="dashboard.html">
+				<img src=" assets/img/logo.png" alt="logo" height="50" width="50" />
+				<h1>Raumbuchungs Web-App</h1>
+			</a>
+		</header>
 
-<body>
-	<header>
-		<a href="dashboard.html"><img src=" assets/img/logo.png" alt="logo" height="50" width="50" id="logo" /></a>
-		<h1>Raumbuchungs Web-App</h1>
-	</header>
-	<nav>
-		<ul>
-			<li><a href="./liste.html">Raumliste</a></li>
-			<li><a href="./raum.html">Raumdetails</a></li>
-			<li><a href="./buchung.html">Buchungsdetails</a></li>
-			<li><a href="./seminar.html">Seminar anlegen</a></li>
-		</ul>
-	</nav>
-	<div class="flexInner">
-		<aside>
-			<h2>Meldungen</h2>
+		<nav class="clearFloat">
 			<ul>
-				<li><time datetime="2019-10-06">06.10.2019:</time> Stühle kaputt</li>
-				<li><time datetime="2019-10-10">10.10.2019:</time> Beamer kaputt</li>
-				<li><time datetime="2019-10-16">16.10.2019:</time> Fenster kaputt</li>
+				<li><a href="./liste.html">Raumliste</a></li>
+				<li><a href="./raum.html">Raumdetails</a></li>
+				<li><a href="./buchung.html">Buchungsdetails</a></li>
+				<li><a href="./seminar.html">Seminar anlegen</a></li>
 			</ul>
-		</aside>
-		<main>
-			<article>
-				<form method="GET" action="https://labs.inf.fh-dortmund.de/roomReservationService/testRoomSearch.php">
-					<span class="required">
-						<label for="raumnummer">Raumnummer: </label>
-						<input type="text" list="raumliste" name="roomno" id="raumnummer" autofocus
-							placeholder="Raumnummer" pattern="[A-Z]\.[E0-3]\.[0-9]{2}" maxlength="6" required></span>
-					<datalist id="raumliste">
-						<option value="A.E.01">
-						<option value="A.E.02">
-						<option value="A.E.03">
-					</datalist>
-					<input type="submit" value="Finden">
-				</form>
-				<h2>Raumliste</h2>
-				<ul>
-					<li><a href="./raum.html">A.E.01</a> Hörsaal EF42</li>
-					<li><a href="./raum.html">A.E.02</a> Hörsaal EF42</li>
-					<li><a href="./raum.html">A.E.03</a> Hörsaal EF42</li>
-					<li><a href="./raum.html">A.E.04</a> Hörsaal EF42</li>
-					<li><a href="./raum.html">A.E.05</a> Hörsaal EF42</li>
-					<li><a href="./raum.html">A.E.06</a> Hörsaal EF42</li>
-					<li><a href="./raum.html">A.E.07</a> Hörsaal EF42</li>
-				</ul>
-			</article>
-		</main>
-	</div>
-	<footer>
-		© 2019 Maksim Zimmermann & Martin Zacharias 🕴
-	</footer>
-</body>
+		</nav>
 
+		<div class="flexInner">
+			<main>
+				<article>
+					<form method="GET" action="https://labs.inf.fh-dortmund.de/roomReservationService/testRoomSearch.php">
+						<span class="required">
+							<label for="raumnummer">Raumnummer: </label>
+							<input
+								type="text"
+								list="raumliste"
+								name="roomno"
+								id="raumnummer"
+								placeholder="Raumnummer"
+								pattern="[A-Z]\.[E0-3]\.[0-9]{2}"
+								maxlength="6"
+								autofocus
+								required
+							/>
+						</span>
+						<datalist id="raumliste">
+							<option value="A.E.01"> </option>
+							<option value="A.E.02"> </option>
+							<option value="A.E.03"> </option>
+						</datalist>
+						<input type="submit" value="Finden" />
+					</form>
+					<h2>Raumliste</h2>
+					<ul>
+						<li><a href="./raum.html">A.E.01</a> Hörsaal EF42</li>
+						<li><a href="./raum.html">A.E.02</a> Hörsaal EF42</li>
+						<li><a href="./raum.html">A.E.03</a> Hörsaal EF42</li>
+						<li><a href="./raum.html">A.E.04</a> Hörsaal EF42</li>
+						<li><a href="./raum.html">A.E.05</a> Hörsaal EF42</li>
+						<li><a href="./raum.html">A.E.06</a> Hörsaal EF42</li>
+						<li><a href="./raum.html">A.E.07</a> Hörsaal EF42</li>
+					</ul>
+				</article>
+			</main>
+
+			<aside>
+				<h2>Meldungen</h2>
+				<ul>
+					<li><time datetime="2019-10-06">06.10.2019:</time> Stühle kaputt</li>
+					<li><time datetime="2019-10-10">10.10.2019:</time> Beamer kaputt</li>
+					<li><time datetime="2019-10-16">16.10.2019:</time> Fenster kaputt</li>
+				</ul>
+			</aside>
+		</div>
+
+		<footer>
+			© 2019 Maksim Zimmermann & Martin Zacharias 🕴
+		</footer>
+		<script src="script.js"></script>
+	</body>
 </html>
