@@ -32,7 +32,7 @@ header h1 {
 
 /* #region navbar*/
 /* clear logo float */
-nav {
+.clearFloat {
 	clear: both;
 }
 
@@ -134,4 +134,16 @@ footer {
 	bottom: 0px;
 	background-color: wheat;
 	clear: both;
+}
+
+@media only screen and (max-width: 786px) {
+	header h1 {
+		font-size: x-large;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	header h1 {
+		display: none;
+	}
 }

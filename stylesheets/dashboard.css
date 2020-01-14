@@ -18,3 +18,19 @@
 	text-decoration: none;
 	color: black;
 }
+
+@media only screen and (max-width: 786px) {
+	.flex a {
+		width: 8em;
+		height: 8em;
+		font-size: smaller;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.flex a {
+		width: 6em;
+		height: 6em;
+		font-size: small;
+	}
+}
