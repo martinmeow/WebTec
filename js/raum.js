@@ -7,6 +7,7 @@ export default class Raum {
 	kapazitat;
 	ausstattungsmerkmale;
 	buchungen = [];
+
 	constructor(nummer, bezeichnung, gebaude, kapazitat, ausstattungsmerkmale) {
 		this.nummer = nummer;
 		this.bezeichnung = bezeichnung;
