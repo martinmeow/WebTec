@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Dashboard</title>
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/dashboard.css" />
+	</head>
+
+	<body>
+		<%- include("includes/header.ejs") %>
+
+		<main class="flex clearFloat">
+			<a href="/liste">
+				<div>Raumliste</div>
+			</a>
+			<a href="/raum">
+				<div>Raum deteils</div>
+			</a>
+			<a href="/buchung">
+				<div>Buchungs deteils</div>
+			</a>
+			<a href="/seminar">
+				<div>Neue Buchung anlegen</div>
+			</a>
+		</main>
+
+		<%- include("includes/footer.ejs") %>
+		<script src="/js/dashboard.js" type="module"></script>
+	</body>
+</html>

@@ -1,0 +1,154 @@
+/* global fonts */
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: coral;
+}
+
+/* #region header*/
+/* logo + heading inline */
+header img {
+	float: left;
+}
+
+header a {
+	text-decoration: none;
+}
+
+/* titel heading */
+header h1 {
+	text-shadow: 4px 4px 2px cyan;
+	letter-spacing: 5px;
+}
+/* #endregion header*/
+
+/* #region navbar*/
+/* clear logo float */
+.clearFloat {
+	clear: both;
+}
+
+nav ul {
+	padding: 0px;
+}
+
+/* nav bar links */
+nav ul li {
+	list-style: none;
+	margin-left: 10px;
+	display: inline-block;
+}
+/* #endregion navbar*/
+
+/* #region inputs*/
+/* verschiedene inputs valid */
+input[type="text"]:valid,
+input[type="date"]:valid,
+input[type="time"]:valid {
+	border-color: lime;
+	outline-color: lime;
+}
+
+/* verschiedene inputs invalid */
+:invalid {
+	border-color: red;
+	outline-color: rebeccapurple;
+}
+
+/* required inputs invalid */
+:required {
+	background-color: cornsilk;
+}
+
+/* span um required inputs */
+span.required::after {
+	content: " (erforderliche Eingabe)";
+}
+/* #endregion inputs*/
+
+/* jede zweite Zeile im buchungsTable */
+#buchungsTable tbody tr:nth-of-type(even) {
+	background-color: lightgray;
+}
+
+/* Kopfzeile */
+#buchungsTable th {
+	background-color: lightslategray;
+}
+
+/* mailto links */
+a[href^="mailto:"]::before {
+	content: "📧";
+}
+
+/* #region seminar form*/
+fieldset {
+	padding: 5px;
+	margin: 5px;
+}
+
+legend {
+	font-style: italic;
+	font-size: smaller;
+	border: 1px black solid;
+	background-color: antiquewhite;
+	box-shadow: 2px 2px 2px black;
+}
+
+legend,
+fieldset {
+	border-radius: 5px;
+}
+/* #endregion seminar form*/
+
+/* section border links und unten */
+section {
+	border: 1px black;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	padding: 0px 0px 5px 5px;
+	margin-top: 5px;
+}
+
+/* aktuelle Meldungen */
+aside {
+	background-color: khaki;
+	padding: 3px;
+	margin: 3px;
+	border-style: dashed;
+	border-width: 2px;
+	float: right;
+}
+
+/* footer bleibt immer unten */
+footer {
+	position: fixed;
+	bottom: 0px;
+	background-color: wheat;
+	clear: both;
+}
+
+/* Fehler für 404 Seite*/
+.fehler {
+	color: red;
+}
+
+@media only screen and (max-width: 786px) {
+	header h1 {
+		font-size: x-large;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	header h1 {
+		display: none;
+	}
+}
