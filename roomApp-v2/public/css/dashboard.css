@@ -1,0 +1,36 @@
+.flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.flex a {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	background-color: orange;
+	margin: 0.2em;
+	border: 2px solid black;
+	box-sizing: border-box;
+	height: 10em;
+	width: 10em;
+	text-decoration: none;
+	color: black;
+}
+
+@media only screen and (max-width: 786px) {
+	.flex a {
+		width: 8em;
+		height: 8em;
+		font-size: smaller;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.flex a {
+		width: 6em;
+		height: 6em;
+		font-size: small;
+	}
+}

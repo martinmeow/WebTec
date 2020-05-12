@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Raumdetails</title>
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/grid.css" />
+	</head>
+
+	<body>
+		<%- include("includes/header.ejs") %> <%- include("includes/nav.ejs") %>
+
+		<main>
+			<figure>
+				<img src="/img/raum.jpg" alt="Raumbild" id="raumBild" height="177" width="250" />
+				<figcaption>So sieht der Raum aus</figcaption>
+			</figure>
+			<section>
+				<h2>Infos zum Raum</h2>
+				<ul id="raumDetails">
+					<!-- Hier kommen Raumdetails rein-->
+				</ul>
+			</section>
+
+			<section>
+				<h2>Buchungen</h2>
+				<table id="buchungsTable">
+					<thead>
+						<tr>
+							<th>Datum</th>
+							<th>Startzeit</th>
+							<th>Endzeit</th>
+							<th>Bezeichnung</th>
+						</tr>
+					</thead>
+					<tbody id="raumBuchungen">
+						<!-- HIer kommen Buchungen rein-->
+					</tbody>
+				</table>
+			</section>
+		</main>
+
+		<%- include("includes/meldungen.ejs") %> <%- include("includes/footer.ejs") %>
+		<script src="js/details.js" type="module"></script>
+	</body>
+</html>

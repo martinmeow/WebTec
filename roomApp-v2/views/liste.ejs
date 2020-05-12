@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Raumliste</title>
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/flexbox.css" />
+	</head>
+
+	<body>
+		<%- include("includes/header.ejs") %> <%- include("includes/nav.ejs") %>
+
+		<div class="flexInner">
+			<main>
+				<article>
+					<form method="GET" action="https://labs.inf.fh-dortmund.de/roomReservationService/testRoomSearch.php">
+						<span class="required">
+							<label for="raumnummer">Raumnummer: </label>
+							<input
+								type="text"
+								list="raumliste"
+								name="roomno"
+								id="raumnummer"
+								placeholder="Raumnummer"
+								pattern="[A-Z]\.[E0-3]\.[0-9]{2}"
+								maxlength="6"
+								autofocus
+								required
+							/>
+						</span>
+						<datalist id="raumliste">
+							<option value="A.E.01"> </option>
+							<option value="A.E.02"> </option>
+							<option value="A.E.03"> </option>
+						</datalist>
+						<input type="submit" value="Finden" />
+					</form>
+					<h2>Raumliste</h2>
+					<% if (raume.length > 0){ %>
+					<ul>
+						<% raume.forEach(raum => { %>
+						<li><a href="/raum"><%= raum.nummer %> </a> <%= raum.bezeichnung %> <%= raum.gebaude %></li>
+						<% }) %>
+					</ul>
+					<% } else {%>
+					<p>Keine freien Räume</p>
+					<% } %>
+				</article>
+			</main>
+
+			<%- include("includes/meldungen.ejs") %>
+		</div>
+
+		<%- include("includes/footer.ejs") %>
+	</body>
+</html>
