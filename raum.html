@@ -33,18 +33,9 @@
 			</figure>
 			<section>
 				<h2>Infos zum Raum</h2>
-				<dl>
-					<dt>Nummer</dt>
-					<dd>A.E.01</dd>
-					<dt>Bezeichnung</dt>
-					<dd>Hörsaal</dd>
-					<dt>Gebäude</dt>
-					<dd>EF 42</dd>
-					<dt>Sitzplätze</dt>
-					<dd>100</dd>
-					<dt>Ausstattung</dt>
-					<dd>1 Whiteboard</dd>
-				</dl>
+				<ul id="raumDetails">
+					<!-- leere Liste für die Informationen zum Raum -->
+				</ul>
 			</section>
 
 			<section>
@@ -58,31 +49,8 @@
 							<th>Bezeichnung</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<td><time datetime="2019-10-10">10.10.2019</time></td>
-							<td><time datetime="14:00">14:00</time></td>
-							<td><time datetime="15:30">15:30 Uhr</time></td>
-							<td><a href="./buchung.html">Vorlesung</a></td>
-						</tr>
-						<tr>
-							<td><time datetime="2019-10-11">11.10.2019</time></td>
-							<td><time datetime="14:00">14:00</time></td>
-							<td><time datetime="15:30">15:30 Uhr</time></td>
-							<td><a href="./buchung.html">Übung</a></td>
-						</tr>
-						<tr>
-							<td><time datetime="2019-10-12">12.10.2019</time></td>
-							<td><time datetime="14:00">14:00</time></td>
-							<td><time datetime="15:30">15:30 Uhr</time></td>
-							<td><a href="./buchung.html">Praktikum</a></td>
-						</tr>
-						<tr>
-							<td><time datetime="2019-10-13">13.10.2019</time></td>
-							<td><time datetime="14:00">14:00</time></td>
-							<td><time datetime="15:30">15:30 Uhr</time></td>
-							<td><a href="./buchung.html">Lernen</a></td>
-						</tr>
+					<tbody id="raumBuchungen">
+						<!-- leerer tbody für die Buchungen zum Raum -->
 					</tbody>
 				</table>
 			</section>
@@ -100,5 +68,6 @@
 		<footer>
 			© 2019 Maksim Zimmermann & Martin Zacharias 🕴
 		</footer>
+		<script src="js/details.js" type="module"></script>
 	</body>
 </html>

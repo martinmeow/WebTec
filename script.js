@@ -1,5 +1,9 @@
-import Raum from "./js/raum.js";
-import Buchung from "./js/buchung.js";
+/**
+ * JS TEST OBJECT UND PRINTS AUS PRAKTIKUM 10
+ */
+
+import Raum from "./js/modules/raum.js";
+import Buchung from "./js/modules/buchung.js";
 
 function getViewportWidth() {
 	return window.innerWidth || document.documentElement.clientWidth;
