@@ -98,7 +98,7 @@ export default class Raum {
 			tr.append(bezeichnungTD);
 			const bezeichnungA = document.createElement("a");
 			bezeichnungA.textContent = this.bezeichnung;
-			bezeichnungA.href = "./buchung.html";
+			bezeichnungA.href = "/buchung.html";
 			bezeichnungTD.append(bezeichnungA);
 		});
 		return array;
